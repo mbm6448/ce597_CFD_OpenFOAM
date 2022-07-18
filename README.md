@@ -5,7 +5,7 @@ This repo includes the CFD cases that simulate the experimental study by Duncan 
 It also includes a wave solver that models a wave formulation containing addition of sin and cosine waves. 
 
 Cite this repository:
-
+```
 @software{Moeini_Computational_Fluid_Dynamics,
 author = {Moeini, Mohammad},
 title = {{Computational Fluid Dynamics with OpenFOAM}}
