@@ -1,4 +1,4 @@
-# CE597_CFD_OpenFOAM
+# CE597 CFD with OpenFOAM Project
 
 [![DOI](https://zenodo.org/badge/515343965.svg)](https://zenodo.org/badge/latestdoi/515343965)
 
@@ -12,7 +12,7 @@ Cite this repository:
 @software{Moeini_Computational_Fluid_Dynamics,
 author = {Moeini, Mohammad},
 doi = {10.5281/zenodo.6858448},
-title = {{Computational Fluid Dynamics with OpenFOAM}},
+title = {{CE 597 Project_Computational Fluid Dynamics with OpenFOAM}},
 url = {https://github.com/mbm6448/ce597_CFD_OpenFOAM},
 version = {1.0}
 }
