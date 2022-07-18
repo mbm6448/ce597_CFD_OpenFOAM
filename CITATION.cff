@@ -7,6 +7,7 @@ message: 'If you use this repository, please cite as follows'
 type: software
 url: https://github.com/mbm6448/ce597_CFD_OpenFOAM
 version: 1.0
+doi: 10.5281/zenodo.6858448
 authors:
   - given-names: Mohammad
     family-names: Moeini
