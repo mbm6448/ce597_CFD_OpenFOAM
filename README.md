@@ -1,4 +1,4 @@
-# ce597_CFD_OpenFOAM
+# CE597_CFD_OpenFOAM
 
 [![DOI](https://zenodo.org/badge/515343965.svg)](https://zenodo.org/badge/latestdoi/515343965)
 
