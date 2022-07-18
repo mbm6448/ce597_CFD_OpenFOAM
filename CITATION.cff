@@ -1,0 +1,13 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Computational Fluid Dynamics with OpenFOAM
+message: 'If you use this repository, please cite as follows'
+type: software
+authors:
+  - given-names: Mohammad
+    family-names: Moeini
+    email: moeini@psu.edu
+    affiliation: Pennsylvania State University
+    orcid: 'https://orcid.org/0000-0002-9543-9766'
