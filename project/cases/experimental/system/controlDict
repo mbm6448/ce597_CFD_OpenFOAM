@@ -1,0 +1,194 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     interFoam;
+
+startFrom       startTime;
+
+startTime       10.75;
+
+stopAt          endTime;
+
+endTime         180;
+
+deltaT          0.01;
+
+writeControl    adjustableRunTime;
+
+writeInterval   0.05;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  7;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable yes;
+
+adjustTimeStep  yes;
+
+maxCo           1.00;
+
+maxAlphaCo      1.00;
+
+maxDeltaT       0.05;
+
+
+functions
+{
+	line
+    {
+        type            sets;
+        libs            (sampling);
+        enabled         true;
+        writeControl    writeTime;
+
+        interpolationScheme cellPoint;
+        setFormat       raw;
+
+        sets
+        (
+            s1
+            {
+                type            uniform;
+                axis            distance;
+                start           ( 10 4.92 0.0 );
+                end             ( 10 4.92 2.5 );
+                nPoints         1001;
+            }
+
+            s2
+            {
+                type            uniform;
+                axis            distance;
+                start           ( 15 4.92 0.0 );
+                end             ( 15 4.92 2.5 );
+                nPoints         1001;
+            }
+
+            s3
+            {
+                type            uniform;
+                axis            distance;
+                start           ( 20 4.92 0.0 );
+                end             ( 20 4.92 2.5 );
+                nPoints         1001;
+            }
+
+            s4
+            {
+                type            uniform;
+                axis            distance;
+                start           ( 25 4.92 0.0 );
+                end             ( 25 4.92 2.5 );
+                nPoints         1001;
+            }
+
+            s5
+            {
+                type            uniform;
+                axis            distance;
+                start           ( 30 4.92 0.0 );
+                end             ( 30 4.92 2.5 );
+                nPoints         1001;
+            }
+
+            s6
+            {
+                type            uniform;
+                axis            distance;
+                start           ( 35 4.92 0.0 );
+                end             ( 35 4.92 2.5 );
+                nPoints         1001;
+            }
+
+            s7
+            {
+                type            uniform;
+                axis            distance;
+                start           ( 40 4.92 0.0 );
+                end             ( 40 4.92 2.5 );
+                nPoints         1001;
+            }
+			
+			p1
+            {
+                type            uniform;
+                axis            distance;
+                start           ( 33.50 4.92 1.35 );
+                end             ( 35.00 4.92 1.35 );
+                nPoints         201;
+            }
+			
+        );
+
+        fixedLocations  false;
+
+        fields
+		(
+		alpha.water
+		p_rgh
+		U
+		);
+    }
+	
+    forces
+	{
+		type forces;
+		libs ("libforces.so");
+		writeControl timeStep;
+		writeInterval 1;
+		patches ("slab");
+
+		// Field names
+        p               p_rgh;
+        U               U;
+		rho         rhoInf;
+        rhoInf      100000;
+        //rho             rho;
+	    
+        // Reference pressure [Pa]
+        pRef            0;
+	    
+        // Include porosity effects?
+        porosity        no;
+	    
+        // Store and write volume field representations of forces and moments
+        writeFields     yes;
+	    
+        // Centre of rotation for moment calculations
+        CofR            (0 0 0);
+	    
+        // Spatial data binning
+        // - extents given by the bounds of the input geometry
+        binData
+        {
+            nBin        200;
+            direction   (1 0 0);
+            cumulative  yes;
+        }
+	}
+}
+
+
+// ************************************************************************* /

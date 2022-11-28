@@ -1,0 +1,82 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      nut;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -1 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    bottom1
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+	ramp
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+	
+	front
+    {
+        type            slip;
+    }
+	
+    back
+    {
+        type            slip;
+    }
+	
+    leftwall
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+	
+    rightwall
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+	
+	top
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+
+	slab
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+	
+    topStrc
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+	
+    piles
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    } 
+}
+
+
+// ************************************************************************* //

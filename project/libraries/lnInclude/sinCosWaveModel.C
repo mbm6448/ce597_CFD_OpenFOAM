@@ -1,0 +1,1 @@
+../sinCos/sinCosWaveModel.C

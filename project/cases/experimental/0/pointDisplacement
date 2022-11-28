@@ -1,0 +1,90 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       pointVectorField;
+    object      pointDisplacement;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 0 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    bottom1
+    {
+        type            zeroGradient;
+    }
+	
+    ramp
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+
+    leftwall
+    {
+        type            waveMaker;
+        value           uniform (0 0 0);
+
+        motionType      piston;
+        n               (1 0 0);
+        waveHeight      0.3;
+        initialDepth    1.40;
+        wavePeriod      4.5;
+        rampTime        4.5;
+        wavePhase       0;
+
+        nPaddle         4;
+        waveAngle       0;
+    }
+
+    back
+    {
+        type            zeroGradient;
+    }
+
+    front
+    {
+        type            zeroGradient;
+    }
+
+    rightwall
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+
+    top
+    {
+        type            zeroGradient;
+    }
+	
+	slab
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    topStrc
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    piles
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,81 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b45f8f6f58-20200629 OPENFOAM=2006
+Arch   : "LSB;label=32;scalar=64"
+Exec   : blockMesh
+Date   : Dec 17 2020
+Time   : 20:16:40
+Host   : DESKTOP-NUME4RM
+PID    : 10989
+I/O    : uncollated
+Case   : /mnt/c/Users/moein/OF_DOT_COM/project/cases/sinCos/sinCos
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From void* Foam::dlLibraryTable::openLibrary(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 65
+    Could not load "libHypSineWave.so"
+/home/moeini/OpenFOAM/moeini-v2006/platforms/linux64Gcc63DPInt32Opt/lib/libHypSineWave.so: undefined symbol: _ZTIN4Foam10waveModels16regularWaveModelE
+Creating block mesh from "system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list (topological search)...
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 0.04 .. 0.04
+        j : 0.04 .. 0.04
+        k : 0.01 .. 0.01
+
+
+There are no merge patch pairs
+
+Writing polyMesh with 0 cellZones
+----------------
+Mesh Information
+----------------
+  boundingBox: (0 0 0) (20 0.04 0.75)
+  nPoints: 76152
+  nCells: 37500
+  nFaces: 150575
+  nInternalFaces: 74425
+----------------
+Patches
+----------------
+  patch 0 (start: 74425 size: 75) name: inlet
+  patch 1 (start: 74500 size: 75) name: outlet
+  patch 2 (start: 74575 size: 500) name: ground
+  patch 3 (start: 75075 size: 500) name: top
+  patch 4 (start: 75575 size: 75000) name: sides
+
+End
+

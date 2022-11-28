@@ -1,0 +1,96 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b45f8f6f58-20200629 OPENFOAM=2006
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar
+Date   : Dec 17 2020
+Time   : 20:16:42
+Host   : DESKTOP-NUME4RM
+PID    : 10990
+I/O    : uncollated
+Case   : /mnt/c/Users/moein/OF_DOT_COM/project/cases/sinCos/sinCos
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From void* Foam::dlLibraryTable::openLibrary(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 65
+    Could not load "libHypSineWave.so"
+/home/moeini/OpenFOAM/moeini-v2006/platforms/linux64Gcc63DPInt32Opt/lib/libHypSineWave.so: undefined symbol: _ZTIN4Foam10waveModels16regularWaveModelE
+
+
+Decomposing mesh region0
+
+Create mesh
+
+Calculating distribution of cells
+Selecting decompositionMethod hierarchical [2]
+
+Finished decomposition in 0.01 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+--> FOAM Warning : 
+    From void* Foam::dlLibraryTable::openLibrary(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 65
+    Could not load "libHypSineWave.so"
+/home/moeini/OpenFOAM/moeini-v2006/platforms/linux64Gcc63DPInt32Opt/lib/libHypSineWave.so: undefined symbol: _ZTIN4Foam10waveModels16regularWaveModelE
+
+Processor 0
+    Number of cells = 18750
+    Number of faces shared with processor 1 = 75
+    Number of processor patches = 1
+    Number of processor faces = 75
+    Number of boundary faces = 38075
+--> FOAM Warning : 
+    From void* Foam::dlLibraryTable::openLibrary(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 65
+    Could not load "libHypSineWave.so"
+/home/moeini/OpenFOAM/moeini-v2006/platforms/linux64Gcc63DPInt32Opt/lib/libHypSineWave.so: undefined symbol: _ZTIN4Foam10waveModels16regularWaveModelE
+
+Processor 1
+    Number of cells = 18750
+    Number of faces shared with processor 0 = 75
+    Number of processor patches = 1
+    Number of processor faces = 75
+    Number of boundary faces = 38075
+
+Number of processor faces = 75
+Max number of cells = 18750 (0% above average 18750)
+Max number of processor patches = 1 (0% above average 1)
+Max number of faces between processors = 75 (0% above average 75)
+
+Time = 0
+
+Processor 0: field transfer
+--> FOAM Warning : 
+    From void* Foam::dlLibraryTable::openLibrary(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 65
+    Could not load "libHypSineWave.so"
+/home/moeini/OpenFOAM/moeini-v2006/platforms/linux64Gcc63DPInt32Opt/lib/libHypSineWave.so: undefined symbol: _ZTIN4Foam10waveModels16regularWaveModelE
+Processor 1: field transfer
+--> FOAM Warning : 
+    From void* Foam::dlLibraryTable::openLibrary(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 65
+    Could not load "libHypSineWave.so"
+/home/moeini/OpenFOAM/moeini-v2006/platforms/linux64Gcc63DPInt32Opt/lib/libHypSineWave.so: undefined symbol: _ZTIN4Foam10waveModels16regularWaveModelE
+
+End
+
